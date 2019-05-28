@@ -126,19 +126,16 @@
     
     // 依据右上角检查
     
-    NSInteger index = 0;
     for (UICollectionViewLayoutAttributes *att in foreArr) {
         
         CGPoint originPoint = CGPointMake(att.frame.origin.x + att.size.width, att.frame.origin.y);
         
-        if ([self canPossibleToPlaceAViewWithPoint:originPoint attributes:attributes foreArr:foreArr]) {
-            
-            if (originPoint.y < leftTopPoint.y) {
+        if ([self checkIfAvailableWithPoint:originPoint attributes:attributes foreArr:foreArr]) {
+            if ([self needRecordNewPointWithleftTopPoint:leftTopPoint newPoint:originPoint]) {
                 leftTopPoint = originPoint;
             }
-            
         }
-        index++;
+
     }
     
     if (leftTopPoint.y == NSUIntegerMax) {
@@ -148,12 +145,10 @@
             
             CGPoint originPoint = CGPointMake(att.frame.origin.x, att.frame.origin.y + att.frame.size.height);
             
-            if ([self canPossibleToPlaceAViewWithPoint:originPoint attributes:attributes foreArr:foreArr]) {
-                
-                if (originPoint.y < leftTopPoint.y) {
+            if ([self checkIfAvailableWithPoint:originPoint attributes:attributes foreArr:foreArr]) {
+                if ([self needRecordNewPointWithleftTopPoint:leftTopPoint newPoint:originPoint]) {
                     leftTopPoint = originPoint;
                 }
-                
             }
         }
         
@@ -164,48 +159,34 @@
     return eliminationLine;
 }
 
-- (BOOL)canPossibleToPlaceAViewWithPoint:(CGPoint)originPoint
-                              attributes:(UICollectionViewLayoutAttributes *)attributes
-                                 foreArr:(NSArray<UICollectionViewLayoutAttributes *> *)foreArr
+- (BOOL)needRecordNewPointWithleftTopPoint:(CGPoint)leftTopPoint
+                                  newPoint:(CGPoint)newPoint
 {
-    CGFloat x = originPoint.x;
-    CGFloat y = originPoint.y;
-    
-    CGPoint leftTopPoint        = CGPointMake(x, y);
-    CGPoint leftBottomPoint     = CGPointMake(x, y + attributes.size.height);
-    CGPoint rightTopPoint       = CGPointMake(x + attributes.size.width, y);
-    CGPoint rightBottomPoint    = CGPointMake(x + attributes.size.width, y + attributes.size.height);
-    CGPoint centerPoint         = CGPointMake(x + attributes.size.width / 2.f, y + attributes.size.height / 2.f);
-    
-    if ([self isBlankAreaWithPoint:leftTopPoint foreArr:foreArr] &&
-        [self isBlankAreaWithPoint:leftBottomPoint foreArr:foreArr] &&
-        [self isBlankAreaWithPoint:rightTopPoint foreArr:foreArr] &&
-        [self isBlankAreaWithPoint:rightBottomPoint foreArr:foreArr] &&
-        [self isBlankAreaWithPoint:centerPoint foreArr:foreArr]) {
-        
+    if (newPoint.y < leftTopPoint.y) {
         return YES;
+    }
+    if (newPoint.y == leftTopPoint.y) {
+        if (newPoint.x < leftTopPoint.x) {
+            return YES;
+        }
     }
     
     return NO;
 }
 
-- (BOOL)isBlankAreaWithPoint:(CGPoint)point
-                     foreArr:(NSArray<UICollectionViewLayoutAttributes *> *)foreArr
+- (BOOL)checkIfAvailableWithPoint:(CGPoint)originPoint
+                       attributes:(UICollectionViewLayoutAttributes *)attributes
+                          foreArr:(NSArray<UICollectionViewLayoutAttributes *> *)foreArr
 {
-    for (UICollectionViewLayoutAttributes *attributes in foreArr) {
-        
-        CGRect rect = attributes.frame;
-        
-        CGFloat itemLeft    = rect.origin.x - 0.1;
-        CGFloat itemRight   = rect.origin.x + rect.size.width - 0.1;
-        CGFloat itemTop     = rect.origin.y - 0.1;
-        CGFloat itemBottom  = rect.origin.y + rect.size.height - 0.1;
-        
-        if (point.x > itemLeft && point.x < itemRight && point.y > itemTop && point.y < itemBottom) {
-            return NO;
-        }
-        
-        if (point.x > self.collectionViewContentSize.width) {
+    
+    CGFloat itemRight  = originPoint.x + attributes.size.width;
+    if (itemRight > self.collectionViewContentSize.width) {
+        return NO;
+    }
+    
+    CGRect originFrame = CGRectMake(originPoint.x, originPoint.y, attributes.size.width, attributes.size.height);
+    for (UICollectionViewLayoutAttributes *att in foreArr) {
+        if (CGRectIntersectsRect(originFrame, att.frame)) {
             return NO;
         }
     }

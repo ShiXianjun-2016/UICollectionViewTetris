@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor   *bgColor;
 @property (nonatomic, strong) NSString  *title;
 
+@property (nonatomic, assign) BOOL animationFlag;
+
 + (instancetype)cellMenuItemModelWithItemWidth:(CGFloat)itemWidth
                                     itemHeight:(CGFloat)itemHeight
                                        bgColor:(UIColor *)bgColor

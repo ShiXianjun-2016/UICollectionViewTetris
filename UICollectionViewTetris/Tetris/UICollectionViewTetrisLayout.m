@@ -15,6 +15,8 @@
  */
 @property (nonatomic, strong) NSMutableArray<NSMutableArray<UICollectionViewLayoutAttributes *> *> *attributesArray;
 
+@property (nonatomic, strong) NSMutableArray<NSNumber *> *arrSectionContentHeight;
+
 @end
 
 
@@ -25,7 +27,8 @@
 {
     [super prepareLayout];
     
-    self.attributesArray = [NSMutableArray array];
+    self.attributesArray            = [NSMutableArray array];
+    self.arrSectionContentHeight    = [NSMutableArray array];
     
     NSInteger sectionNumber = [self.collectionView numberOfSections];
     
@@ -41,7 +44,7 @@
             UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
             [sectionAttributesArray addObject:attributes];
         }
-        
+        [self.arrSectionContentHeight addObject:@(0)];
         [self.attributesArray addObject:sectionAttributesArray];
     }
     
@@ -65,15 +68,18 @@
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-//    NSArray *arrAttributes = [super layoutAttributesForElementsInRect:rect];
-    return self.attributesArray.firstObject;
+    NSMutableArray *arrAllAtts = [NSMutableArray array];
+    for (NSArray *arr in self.attributesArray) {
+        [arrAllAtts addObjectsFromArray:arr];
+    }
+    return arrAllAtts;
 }
 
 -(CGSize)collectionViewContentSize
 {
     CGFloat width = self.collectionView.frame.size.width;
     
-    return CGSizeMake(width, 500);
+    return CGSizeMake(width, self.arrSectionContentHeight.lastObject.floatValue);
 }
 
 
@@ -118,7 +124,13 @@
 
 {
     if (foreArr.count == 0) {
-        attributes.frame = CGRectMake(0, 0, attributes.size.width, attributes.size.height);
+        
+        CGFloat basicsY = 0;
+        if (attributes.indexPath.section > 0) {
+            basicsY = self.arrSectionContentHeight[attributes.indexPath.section - 1].floatValue;
+        }
+        
+        attributes.frame = CGRectMake(0, basicsY, attributes.size.width, attributes.size.height);
         return eliminationLine;
     }
     
@@ -155,6 +167,12 @@
     }
     
     attributes.frame = CGRectMake(leftTopPoint.x, leftTopPoint.y, attributes.size.width, attributes.size.height);
+    
+    NSNumber *contentHeight = self.arrSectionContentHeight[attributes.indexPath.section];
+    CGFloat itemBottom = attributes.frame.origin.y + attributes.frame.size.height;
+    if (contentHeight.floatValue < itemBottom) {
+        self.arrSectionContentHeight[attributes.indexPath.section] = @(itemBottom);
+    }
     
     return eliminationLine;
 }

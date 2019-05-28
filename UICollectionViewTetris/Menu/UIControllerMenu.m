@@ -104,11 +104,6 @@
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"13"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3
-                                                                           itemHeight:itemWidth_3
-                                                                              bgColor:[self getRandomColor]
-                                                                                title:@"14"]];
-    
 }
 
 - (void)initializationView
@@ -130,6 +125,10 @@
 }
 
 #pragma mark <UICollectionViewDataSource>
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.arrCellModels.count;
@@ -147,6 +146,13 @@
 {
     UICellMenuItemModel *cellModel = self.arrCellModels[indexPath.row];
     return CGSizeMake(cellModel.itemWidth, cellModel.itemHeight);
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICellMenuItem *cell = (UICellMenuItem *)[collectionView cellForItemAtIndexPath:indexPath];
+    [cell viewAnimation];
 }
 
 @end

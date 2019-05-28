@@ -22,9 +22,29 @@
     if (_cellModel != cellModel) {
         _cellModel = cellModel;
     }
+    if (_cellModel.animationFlag) {
+        self.contentView.backgroundColor = UIColor.blackColor;
+    }else{
+        self.contentView.backgroundColor = _cellModel.bgColor;
+    }
     
-    self.backgroundColor    = _cellModel.bgColor;
-    self.lblTitle.text      = _cellModel.title;
+    self.lblTitle.text                  = _cellModel.title;
 }
 
+
+- (void)viewAnimation
+{
+    self.cellModel.animationFlag = !self.cellModel.animationFlag;
+    
+    [UIView transitionWithView:self.contentView duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        
+        if (self.cellModel.animationFlag) {
+            self.contentView.backgroundColor = UIColor.blackColor;
+        }else{
+            self.contentView.backgroundColor = self.cellModel.bgColor;
+        }
+        
+    } completion:nil];
+    
+}
 @end

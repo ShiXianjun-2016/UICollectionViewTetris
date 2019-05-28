@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIControllerMenu.h
 //  UICollectionViewTetris
 //
 //  Created by 石显军 on 2019/5/28.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface UIControllerMenu : UICollectionViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		67206B4A229CDC0E00CD0A96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67206B49229CDC0E00CD0A96 /* AppDelegate.m */; };
-		67206B4D229CDC0E00CD0A96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67206B4C229CDC0E00CD0A96 /* ViewController.m */; };
 		67206B50229CDC0E00CD0A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67206B4E229CDC0E00CD0A96 /* Main.storyboard */; };
 		67206B52229CDC0F00CD0A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67206B51229CDC0F00CD0A96 /* Assets.xcassets */; };
 		67206B55229CDC0F00CD0A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67206B53229CDC0F00CD0A96 /* LaunchScreen.storyboard */; };
 		67206B58229CDC0F00CD0A96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67206B57229CDC0F00CD0A96 /* main.m */; };
+		67206B65229CDD6600CD0A96 /* UIControllerMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 67206B64229CDD6600CD0A96 /* UIControllerMenu.m */; };
+		67206B68229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 67206B67229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.m */; };
+		6740D787229CE0C00092E017 /* UICellMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6740D785229CE0C00092E017 /* UICellMenuItem.m */; };
+		6740D788229CE0C00092E017 /* UICellMenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6740D786229CE0C00092E017 /* UICellMenuItem.xib */; };
+		6740D78B229CE12A0092E017 /* UICellMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6740D78A229CE12A0092E017 /* UICellMenuItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67206B45229CDC0E00CD0A96 /* UICollectionViewTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67206B48229CDC0E00CD0A96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67206B49229CDC0E00CD0A96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		67206B4B229CDC0E00CD0A96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		67206B4C229CDC0E00CD0A96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		67206B4F229CDC0E00CD0A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67206B51229CDC0F00CD0A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67206B54229CDC0F00CD0A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67206B56229CDC0F00CD0A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67206B57229CDC0F00CD0A96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67206B63229CDD6600CD0A96 /* UIControllerMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIControllerMenu.h; sourceTree = "<group>"; };
+		67206B64229CDD6600CD0A96 /* UIControllerMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControllerMenu.m; sourceTree = "<group>"; };
+		67206B66229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewTetrisLayout.h; sourceTree = "<group>"; };
+		67206B67229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewTetrisLayout.m; sourceTree = "<group>"; };
+		67206B69229CDF0100CD0A96 /* UICollectionViewDelegateTetrisLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDelegateTetrisLayout.h; sourceTree = "<group>"; };
+		6740D784229CE0C00092E017 /* UICellMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICellMenuItem.h; sourceTree = "<group>"; };
+		6740D785229CE0C00092E017 /* UICellMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICellMenuItem.m; sourceTree = "<group>"; };
+		6740D786229CE0C00092E017 /* UICellMenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICellMenuItem.xib; sourceTree = "<group>"; };
+		6740D789229CE12A0092E017 /* UICellMenuItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICellMenuItemModel.h; sourceTree = "<group>"; };
+		6740D78A229CE12A0092E017 /* UICellMenuItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICellMenuItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,10 @@
 		67206B47229CDC0E00CD0A96 /* UICollectionViewTetris */ = {
 			isa = PBXGroup;
 			children = (
+				6740D783229CE09B0092E017 /* Menu */,
+				67206B5E229CDC6800CD0A96 /* Tetris */,
 				67206B48229CDC0E00CD0A96 /* AppDelegate.h */,
 				67206B49229CDC0E00CD0A96 /* AppDelegate.m */,
-				67206B4B229CDC0E00CD0A96 /* ViewController.h */,
-				67206B4C229CDC0E00CD0A96 /* ViewController.m */,
 				67206B4E229CDC0E00CD0A96 /* Main.storyboard */,
 				67206B51229CDC0F00CD0A96 /* Assets.xcassets */,
 				67206B53229CDC0F00CD0A96 /* LaunchScreen.storyboard */,
@@ -69,6 +81,30 @@
 				67206B57229CDC0F00CD0A96 /* main.m */,
 			);
 			path = UICollectionViewTetris;
+			sourceTree = "<group>";
+		};
+		67206B5E229CDC6800CD0A96 /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				67206B66229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.h */,
+				67206B67229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.m */,
+				67206B69229CDF0100CD0A96 /* UICollectionViewDelegateTetrisLayout.h */,
+			);
+			path = Tetris;
+			sourceTree = "<group>";
+		};
+		6740D783229CE09B0092E017 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				67206B63229CDD6600CD0A96 /* UIControllerMenu.h */,
+				67206B64229CDD6600CD0A96 /* UIControllerMenu.m */,
+				6740D784229CE0C00092E017 /* UICellMenuItem.h */,
+				6740D785229CE0C00092E017 /* UICellMenuItem.m */,
+				6740D786229CE0C00092E017 /* UICellMenuItem.xib */,
+				6740D789229CE12A0092E017 /* UICellMenuItemModel.h */,
+				6740D78A229CE12A0092E017 /* UICellMenuItemModel.m */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67206B55229CDC0F00CD0A96 /* LaunchScreen.storyboard in Resources */,
+				6740D788229CE0C00092E017 /* UICellMenuItem.xib in Resources */,
 				67206B52229CDC0F00CD0A96 /* Assets.xcassets in Resources */,
 				67206B50229CDC0E00CD0A96 /* Main.storyboard in Resources */,
 			);
@@ -141,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67206B4D229CDC0E00CD0A96 /* ViewController.m in Sources */,
+				6740D787229CE0C00092E017 /* UICellMenuItem.m in Sources */,
+				67206B65229CDD6600CD0A96 /* UIControllerMenu.m in Sources */,
 				67206B58229CDC0F00CD0A96 /* main.m in Sources */,
 				67206B4A229CDC0E00CD0A96 /* AppDelegate.m in Sources */,
+				67206B68229CDE2A00CD0A96 /* UICollectionViewTetrisLayout.m in Sources */,
+				6740D78B229CE12A0092E017 /* UICellMenuItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

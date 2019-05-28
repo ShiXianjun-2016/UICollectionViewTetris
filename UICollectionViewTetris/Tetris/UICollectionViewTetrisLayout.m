@@ -196,10 +196,10 @@
         
         CGRect rect = attributes.frame;
         
-        CGFloat itemLeft    = rect.origin.x;
-        CGFloat itemRight   = rect.origin.x + rect.size.width;
-        CGFloat itemTop     = rect.origin.y;
-        CGFloat itemBottom  = rect.origin.y + rect.size.height;
+        CGFloat itemLeft    = rect.origin.x - 0.1;
+        CGFloat itemRight   = rect.origin.x + rect.size.width - 0.1;
+        CGFloat itemTop     = rect.origin.y - 0.1;
+        CGFloat itemBottom  = rect.origin.y + rect.size.height - 0.1;
         
         if (point.x > itemLeft && point.x < itemRight && point.y > itemTop && point.y < itemBottom) {
             return NO;

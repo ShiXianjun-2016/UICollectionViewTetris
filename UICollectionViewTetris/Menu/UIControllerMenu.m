@@ -118,6 +118,15 @@
     
     UICollectionViewTetrisLayout *tetrisLayout = (UICollectionViewTetrisLayout *)self.collectionViewLayout;
     tetrisLayout.delegate = self;
+    
+    CGRect rect1 = CGRectMake(0, 0, 100, 100);
+    CGRect rect2 = CGRectMake(100, 0, 100, 100);
+    
+    if (CGRectIntersectsRect(rect1, rect2)) {
+        NSLog(@"交叉");
+    }else{
+        NSLog(@"未交叉");
+    }
 }
 
 - (UIColor *)getRandomColor

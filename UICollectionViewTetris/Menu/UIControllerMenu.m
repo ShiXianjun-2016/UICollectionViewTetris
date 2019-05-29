@@ -69,28 +69,28 @@
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"6"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
-                                                                           itemHeight:itemWidth_4
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3
+                                                                           itemHeight:itemWidth_2
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"7"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3 * 2
                                                                            itemHeight:itemWidth_4
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"8"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_2
-                                                                           itemHeight:itemWidth_2
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3 * 2
+                                                                           itemHeight:itemWidth_4
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"9"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
-                                                                           itemHeight:itemWidth_4
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3 * 2
+                                                                           itemHeight:itemWidth_3 * 2
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"10"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
-                                                                           itemHeight:itemWidth_4
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3
+                                                                           itemHeight:itemWidth_3
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"11"]];
     
@@ -99,10 +99,33 @@
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"12"]];
     
-    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_3
-                                                                           itemHeight:itemWidth_3
+    
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
+                                                                           itemHeight:itemWidth_4
                                                                               bgColor:[self getRandomColor]
                                                                                 title:@"13"]];
+    
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_2
+                                                                           itemHeight:itemWidth_2
+                                                                              bgColor:[self getRandomColor]
+                                                                                title:@"14"]];
+    
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
+                                                                           itemHeight:itemWidth_4
+                                                                              bgColor:[self getRandomColor]
+                                                                                title:@"15"]];
+    
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
+                                                                           itemHeight:itemWidth_4
+                                                                              bgColor:[self getRandomColor]
+                                                                                title:@"16"]];
+    
+    [self.arrCellModels addObject:[UICellMenuItemModel cellMenuItemModelWithItemWidth:itemWidth_4
+                                                                           itemHeight:itemWidth_4
+                                                                              bgColor:[self getRandomColor]
+                                                                                title:@"17"]];
+    
+    
     
 }
 

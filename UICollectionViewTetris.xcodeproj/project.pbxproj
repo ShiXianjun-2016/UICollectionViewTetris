@@ -17,7 +17,18 @@
 		6740D787229CE0C00092E017 /* UICellMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6740D785229CE0C00092E017 /* UICellMenuItem.m */; };
 		6740D788229CE0C00092E017 /* UICellMenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6740D786229CE0C00092E017 /* UICellMenuItem.xib */; };
 		6740D78B229CE12A0092E017 /* UICellMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6740D78A229CE12A0092E017 /* UICellMenuItemModel.m */; };
+		677A1EDC229E5C99007E97DF /* UICollectionViewTetrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 677A1EDB229E5C99007E97DF /* UICollectionViewTetrisTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		677A1EDE229E5C99007E97DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67206B3D229CDC0E00CD0A96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67206B44229CDC0E00CD0A96;
+			remoteInfo = UICollectionViewTetris;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		67206B45229CDC0E00CD0A96 /* UICollectionViewTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +49,20 @@
 		6740D786229CE0C00092E017 /* UICellMenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICellMenuItem.xib; sourceTree = "<group>"; };
 		6740D789229CE12A0092E017 /* UICellMenuItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICellMenuItemModel.h; sourceTree = "<group>"; };
 		6740D78A229CE12A0092E017 /* UICellMenuItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICellMenuItemModel.m; sourceTree = "<group>"; };
+		677A1ED9229E5C99007E97DF /* UICollectionViewTetrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewTetrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		677A1EDB229E5C99007E97DF /* UICollectionViewTetrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewTetrisTests.m; sourceTree = "<group>"; };
+		677A1EDD229E5C99007E97DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		67206B42229CDC0E00CD0A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677A1ED6229E5C99007E97DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				67206B47229CDC0E00CD0A96 /* UICollectionViewTetris */,
+				677A1EDA229E5C99007E97DF /* UICollectionViewTetrisTests */,
 				67206B46229CDC0E00CD0A96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				67206B45229CDC0E00CD0A96 /* UICollectionViewTetris.app */,
+				677A1ED9229E5C99007E97DF /* UICollectionViewTetrisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +130,15 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		677A1EDA229E5C99007E97DF /* UICollectionViewTetrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				677A1EDB229E5C99007E97DF /* UICollectionViewTetrisTests.m */,
+				677A1EDD229E5C99007E97DF /* Info.plist */,
+			);
+			path = UICollectionViewTetrisTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +159,24 @@
 			productReference = 67206B45229CDC0E00CD0A96 /* UICollectionViewTetris.app */;
 			productType = "com.apple.product-type.application";
 		};
+		677A1ED8229E5C99007E97DF /* UICollectionViewTetrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677A1EE2229E5C99007E97DF /* Build configuration list for PBXNativeTarget "UICollectionViewTetrisTests" */;
+			buildPhases = (
+				677A1ED5229E5C99007E97DF /* Sources */,
+				677A1ED6229E5C99007E97DF /* Frameworks */,
+				677A1ED7229E5C99007E97DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				677A1EDF229E5C99007E97DF /* PBXTargetDependency */,
+			);
+			name = UICollectionViewTetrisTests;
+			productName = UICollectionViewTetrisTests;
+			productReference = 677A1ED9229E5C99007E97DF /* UICollectionViewTetrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +188,10 @@
 				TargetAttributes = {
 					67206B44229CDC0E00CD0A96 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					677A1ED8229E5C99007E97DF = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 67206B44229CDC0E00CD0A96;
 					};
 				};
 			};
@@ -155,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				67206B44229CDC0E00CD0A96 /* UICollectionViewTetris */,
+				677A1ED8229E5C99007E97DF /* UICollectionViewTetrisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +223,13 @@
 				6740D788229CE0C00092E017 /* UICellMenuItem.xib in Resources */,
 				67206B52229CDC0F00CD0A96 /* Assets.xcassets in Resources */,
 				67206B50229CDC0E00CD0A96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677A1ED7229E5C99007E97DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +249,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		677A1ED5229E5C99007E97DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677A1EDC229E5C99007E97DF /* UICollectionViewTetrisTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		677A1EDF229E5C99007E97DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67206B44229CDC0E00CD0A96 /* UICollectionViewTetris */;
+			targetProxy = 677A1EDE229E5C99007E97DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		67206B4E229CDC0E00CD0A96 /* Main.storyboard */ = {
@@ -355,6 +433,44 @@
 			};
 			name = Release;
 		};
+		677A1EE0229E5C99007E97DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZF2YQF57N;
+				INFOPLIST_FILE = UICollectionViewTetrisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shixianjun.UICollectionViewTetrisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewTetris.app/UICollectionViewTetris";
+			};
+			name = Debug;
+		};
+		677A1EE1229E5C99007E97DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZF2YQF57N;
+				INFOPLIST_FILE = UICollectionViewTetrisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shixianjun.UICollectionViewTetrisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionViewTetris.app/UICollectionViewTetris";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +488,15 @@
 			buildConfigurations = (
 				67206B5C229CDC0F00CD0A96 /* Debug */,
 				67206B5D229CDC0F00CD0A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677A1EE2229E5C99007E97DF /* Build configuration list for PBXNativeTarget "UICollectionViewTetrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677A1EE0229E5C99007E97DF /* Debug */,
+				677A1EE1229E5C99007E97DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -84,11 +84,6 @@
 
 
 #pragma mark - 位置计算
-/**
- *@ 计算思路
- *@ 使用扫描的方式进行查找cell合适的位置
- *@ todo: 以最大公约数为扫描粒度 可以优化时间
- */
 
 - (void)organizeLocationInformation
 {
